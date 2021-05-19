@@ -16,9 +16,12 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            Image.asset(
-              'images/medtracks.png',
-              height: 160,
+            Hero(
+              tag: 'logo',
+              child: Image.asset(
+                'images/medtracks.png',
+                height: 160,
+              ),
             ),
             SizedBox(
               height: 48.0,
@@ -72,10 +75,10 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               height: 14.0,
             ),
             Padding(
-              padding: EdgeInsets.symmetric(vertical: 16.0),
+              padding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 20),
               child: Material(
                 color: Colors.blueAccent,
-                borderRadius: BorderRadius.all(Radius.circular(30.0)),
+                borderRadius: BorderRadius.all(Radius.circular(5.0)),
                 elevation: 5.0,
                 child: MaterialButton(
                   onPressed: () {
@@ -85,7 +88,10 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   height: 42.0,
                   child: Text(
                     'Register',
-                    style: TextStyle(color: Colors.white),
+                    style: TextStyle(
+                      fontSize: 23,
+                      fontWeight: FontWeight.w400,
+                    ),
                   ),
                 ),
               ),

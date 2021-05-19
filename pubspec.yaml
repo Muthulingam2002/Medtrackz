@@ -12,6 +12,7 @@ dependencies:
 
   cupertino_icons: ^0.1.2
   material_design_icons_flutter: ^4.0.5955
+  animated_text_kit: ^4.2.1
 
 dev_dependencies:
   flutter_test:

@@ -16,9 +16,12 @@ class _LoginScreenState extends State<LoginScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            Container(
-              height: 200.0,
-              child: Image.asset('images/medtracks.png'),
+            Hero(
+              tag: 'logo',
+              child: Image.asset(
+                'images/medtracks.png',
+                height: 150,
+              ),
             ),
             SizedBox(
               height: 48.0,
@@ -76,10 +79,10 @@ class _LoginScreenState extends State<LoginScreen> {
               height: 24.0,
             ),
             Padding(
-              padding: EdgeInsets.symmetric(vertical: 16.0),
+              padding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 20),
               child: Material(
                 color: Colors.lightBlueAccent,
-                borderRadius: BorderRadius.all(Radius.circular(30.0)),
+                borderRadius: BorderRadius.all(Radius.circular(5.0)),
                 elevation: 5.0,
                 child: MaterialButton(
                   onPressed: () {
@@ -89,6 +92,10 @@ class _LoginScreenState extends State<LoginScreen> {
                   height: 42.0,
                   child: Text(
                     'Log In',
+                    style: TextStyle(
+                      fontSize: 23,
+                      fontWeight: FontWeight.w400,
+                    ),
                   ),
                 ),
               ),
