@@ -59,7 +59,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               child: Material(
                 elevation: 5.0,
                 color: Colors.lightBlueAccent,
-                borderRadius: BorderRadius.circular(5.0),
+                borderRadius: BorderRadius.circular(30.0),
                 child: MaterialButton(
                   onPressed: () {
                     Navigator.pushNamed(context, 'login_screen');
@@ -80,7 +80,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20),
               child: Material(
                 color: Colors.blueAccent,
-                borderRadius: BorderRadius.circular(5.0),
+                borderRadius: BorderRadius.circular(30.0),
                 elevation: 5.0,
                 child: MaterialButton(
                   onPressed: () {

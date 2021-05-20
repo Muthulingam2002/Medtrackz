@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "676550478571",
+    "project_id": "medtrackz",
+    "storage_bucket": "medtrackz.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:676550478571:android:36b6a4fbb53ca08196ccae",
+        "android_client_info": {
+          "package_name": "com.crazydevs.medtrackz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "676550478571-16k2hea5gdaaqf552pt6rimr936hrbim.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDr8toU_D7p0r1UH3im8DsR4duSeXvIzAg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "676550478571-16k2hea5gdaaqf552pt6rimr936hrbim.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
