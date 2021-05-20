@@ -16,6 +16,7 @@ class _AboutState extends State<About> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             CircleAvatar(
+              backgroundColor: Colors.black,
               backgroundImage: AssetImage('images/medtracks.png'),
               radius: 50,
             ),
@@ -66,36 +67,39 @@ class _AboutState extends State<About> {
                     color: Colors.blueAccent,
                   ),
                 )),
-            Container(
-                color: Colors.black,
-                margin: EdgeInsets.symmetric(vertical: 15, horizontal: 60),
-                padding: EdgeInsets.all(15),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Icon(
-                      MdiIcons.facebook,
-                      color: Colors.yellow.shade600,
-                      size: 40,
-                    ),
-                    SizedBox(
-                      width: 40,
-                    ),
-                    Icon(
-                      MdiIcons.instagram,
-                      color: Colors.yellow.shade600,
-                      size: 40,
-                    ),
-                    SizedBox(
-                      width: 40,
-                    ),
-                    Icon(
-                      MdiIcons.googlePlus,
-                      color: Colors.yellow.shade600,
-                      size: 40,
-                    ),
-                  ],
-                ))
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 40),
+              child: Container(
+                  color: Colors.black,
+                  margin: EdgeInsets.symmetric(vertical: 15, horizontal: 30),
+                  padding: EdgeInsets.all(15),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Icon(
+                        MdiIcons.facebook,
+                        color: Colors.yellow.shade600,
+                        size: 40,
+                      ),
+                      SizedBox(
+                        width: 40,
+                      ),
+                      Icon(
+                        MdiIcons.instagram,
+                        color: Colors.yellow.shade600,
+                        size: 40,
+                      ),
+                      SizedBox(
+                        width: 40,
+                      ),
+                      Icon(
+                        MdiIcons.googlePlus,
+                        color: Colors.yellow.shade600,
+                        size: 40,
+                      ),
+                    ],
+                  )),
+            )
           ],
         )),
         backgroundColor: Colors.black,
