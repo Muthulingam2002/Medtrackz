@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flash_chat/constants.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -39,8 +40,14 @@ class _ChatScreenState extends State<ChatScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xFF1F1F2F),
       appBar: AppBar(
-        leading: null,
+        leading: Padding(
+          padding: const EdgeInsets.fromLTRB(10, 6, 0, 6),
+          child: CircleAvatar(
+            backgroundImage: AssetImage('images/chatDoc.jpg'),
+          ),
+        ),
         actions: <Widget>[
           IconButton(
               icon: Icon(Icons.logout),
@@ -49,8 +56,11 @@ class _ChatScreenState extends State<ChatScreen> {
                 Navigator.pop(context);
               }),
         ],
-        title: Text('👨‍⚕️️Chat with Doc'),
-        backgroundColor: Color(0xFFFFD700),
+        title: Text('Chat with Doc',
+            style: TextStyle(
+              fontFamily: 'Pacifico',
+            )),
+        backgroundColor: Color(0xFF2D2E3D),
       ),
       body: SafeArea(
         child: Column(
@@ -65,24 +75,33 @@ class _ChatScreenState extends State<ChatScreen> {
                 children: <Widget>[
                   Expanded(
                     child: TextField(
-                      controller: messageTextController,
-                      onChanged: (value) {
-                        messageText = value;
-                      },
-                      decoration: kMessageTextFieldDecoration,
-                    ),
+                        controller: messageTextController,
+                        onChanged: (value) {
+                          messageText = value;
+                        },
+                        decoration: kMessageTextFieldDecoration),
                   ),
                   TextButton(
                     onPressed: () {
                       messageTextController.clear();
-                      _firestore.collection('messages').add({
-                        'text': messageText,
-                        'sender': loggedInUser.email,
-                        'time': FieldValue.serverTimestamp(),
-                      });
+
+                      if (loggedInUser.email == "doctor@gmail.com") {
+                        _firestore.collection('messages').add({
+                          'text': messageText + "  ⚕️",
+                          'sender': loggedInUser.email,
+                          'time': FieldValue.serverTimestamp(),
+                        });
+                      } else {
+                        _firestore.collection('messages').add({
+                          'text': messageText,
+                          'sender': loggedInUser.email,
+                          'time': FieldValue.serverTimestamp(),
+                        });
+                      }
                     },
                     child: Icon(
                       Icons.send,
+                      size: 38,
                       color: Colors.lightBlue,
                     ),
                   ),
@@ -117,7 +136,6 @@ class MessagesStream extends StatelessWidget {
         for (var message in messages) {
           final messageText = message['text'];
           final messageSender = message['sender'];
-          print('$messageText the message text');
 
           final currentUser = loggedInUser.email;
 
@@ -129,6 +147,7 @@ class MessagesStream extends StatelessWidget {
 
           messageBubbles.add(messageBubble);
         }
+
         return Expanded(
           child: ListView(
             reverse: true,
@@ -175,14 +194,15 @@ class MessageBubble extends StatelessWidget {
                     topRight: Radius.circular(30.0),
                   ),
             elevation: 5.0,
-            color: isMe ? Colors.lightBlueAccent : Colors.blueAccent,
+            color: isMe ? Colors.blueAccent : Color(0xFFF8EC47),
             child: Padding(
-              padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+              padding: EdgeInsets.symmetric(vertical: 18.0, horizontal: 26.0),
               child: Text(
                 text,
                 style: TextStyle(
                   color: isMe ? Colors.white : Colors.black54,
-                  fontSize: 15.0,
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.w400,
                 ),
               ),
             ),
