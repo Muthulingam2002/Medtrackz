@@ -7,6 +7,8 @@ import 'package:flash_chat/screens/chat_screen.dart';
 import 'package:flash_chat/screens/about_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flash_chat/screens/info1.dart';
+import 'package:flash_chat/screens/exercise.dart';
+import 'package:flash_chat/Home.dart';
 
 class Home extends StatefulWidget {
   int _selectedIndex=0;
@@ -18,10 +20,15 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   int _selectedIndex=0;
   List listOfPages=[
+    MyHomePage(title: "Medtrackz",),
     InfoScreen(),
     ChatScreen(),
-    InfoScreen(),
+    workout(),
     About(),
+
+
+
+
 
 
   ];
@@ -40,10 +47,15 @@ class _HomeState extends State<Home> {
           }),
 
           items: [
+            BottomNavyBarItem(
+                icon: Icon(Icons.home),
+                title: Text('Home'),
+                activeColor: Colors.pink
+            ),
 
             BottomNavyBarItem(
               icon: Icon(Icons.apps),
-              title: Text('Home'),
+              title: Text('Information'),
               activeColor: Colors.red,
             ),
             BottomNavyBarItem(
@@ -53,7 +65,7 @@ class _HomeState extends State<Home> {
             ),
             BottomNavyBarItem(
                 icon: Icon(Icons.fitness_center),
-                title: Text('exercise'),
+                title: Text('workout'),
                 activeColor: Colors.blue
             ),
             BottomNavyBarItem(
@@ -61,6 +73,7 @@ class _HomeState extends State<Home> {
                 title: Text('About'),
                 activeColor: Colors.pink
             ),
+
 
           ],
         )
