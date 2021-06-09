@@ -1,0 +1,51 @@
+name: flash_chat
+description: A new Flutter application.
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.1.0<3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  video_player: ^2.1.5
+  cupertino_icons: ^0.1.2
+  material_design_icons_flutter: ^4.0.5955
+  animated_text_kit: ^4.2.1
+  firebase_core: ^1.2.0
+  firebase_auth: ^1.2.0
+  cloud_firestore: ^2.2.0
+  flutter_svg: ^0.20.0-nullsafety.3
+  bottom_navy_bar: ^5.6.0
+  url_launcher:
+  shared_preferences:
+  http:
+  dynamic_theme:
+  pie_chart:
+  animated_splash_screen: ^1.1.0
+  carousel_pro: ^1.0.0
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  fonts:
+    - family: Pacifico
+      fonts:
+        - asset: fonts/Pacifico-Regular.ttf
+        - asset: assets/fonts/Poppins/Poppins-Regular.ttf
+        - asset: assets/fonts/Poppins/Poppins-Medium.ttf
+          weight: 600
+        - asset: assets/fonts/Poppins/Poppins-Bold.ttf
+          weight: 700
+
+  assets:
+  - images/
+  - assets/icons/
+  - assets/images/
+
+
