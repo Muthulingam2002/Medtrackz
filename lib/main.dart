@@ -5,6 +5,9 @@ import 'package:flash_chat/screens/registration_screen.dart';
 import 'package:flash_chat/screens/chat_screen.dart';
 import 'package:flash_chat/screens/about_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flash_chat/screens/info1.dart';
+import 'package:bottom_navy_bar/bottom_navy_bar.dart';
+import 'package:flash_chat/homepage.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -17,11 +20,23 @@ class FlashChat extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark().copyWith(
-        textTheme: TextTheme(
-          bodyText2: TextStyle(color: Colors.black54),
-        ),
-      ),
+      home: Home(),
+
+      // theme: ThemeData.dark().copyWith(
+      //
+      //           decoration: BoxDecoration(
+      //             gradient: LinearGradient(
+      //               begin: Alignment.topRight,
+      //               end: Alignment.bottomLeft,
+      //               colors: [
+      //                 Colors.blue,
+      //                 Colors.red,
+      //               ],
+      //             )
+      //           ),
+      //   ),
+      // ),
+
       initialRoute: 'welcome_screen',
       routes: {
         'welcome_screen': (context) => WelcomeScreen(),
@@ -29,7 +44,11 @@ class FlashChat extends StatelessWidget {
         'registration_screen': (context) => RegistrationScreen(),
         'chat_screen': (context) => ChatScreen(),
         'about_screen': (context) => About(),
+        'info_screen': (context) => InfoScreen(),
+        'homepage':(context)=>Home()
+
       },
+
     );
   }
 }

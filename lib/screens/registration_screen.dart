@@ -33,12 +33,14 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               height: 48.0,
             ),
             TextField(
+
               textAlign: TextAlign.center,
               onChanged: (value) {
                 email = value;
               },
               decoration: InputDecoration(
                 hintText: 'Enter your email',
+                hintStyle: TextStyle( color: Colors.white),
                 contentPadding:
                     EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
                 border: OutlineInputBorder(
@@ -65,6 +67,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               },
               decoration: InputDecoration(
                 hintText: 'Enter your password',
+                hintStyle: TextStyle( color: Colors.white),
                 contentPadding:
                     EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
                 border: OutlineInputBorder(
@@ -108,6 +111,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   child: Text(
                     'Register',
                     style: TextStyle(
+                      color:Colors.white,
                       fontSize: 23,
                       fontWeight: FontWeight.w400,
                     ),

@@ -63,52 +63,64 @@ class _ChatScreenState extends State<ChatScreen> {
         backgroundColor: Color(0xFF2D2E3D),
       ),
       body: SafeArea(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            MessagesStream(),
-            Container(
-              decoration: kMessageContainerDecoration,
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  Expanded(
-                    child: TextField(
-                        controller: messageTextController,
-                        onChanged: (value) {
-                          messageText = value;
-                        },
-                        decoration: kMessageTextFieldDecoration),
-                  ),
-                  TextButton(
-                    onPressed: () {
-                      messageTextController.clear();
-
-                      if (loggedInUser.email == "doctor@gmail.com") {
-                        _firestore.collection('messages').add({
-                          'text': messageText + "  ⚕️",
-                          'sender': loggedInUser.email,
-                          'time': FieldValue.serverTimestamp(),
-                        });
-                      } else {
-                        _firestore.collection('messages').add({
-                          'text': messageText,
-                          'sender': loggedInUser.email,
-                          'time': FieldValue.serverTimestamp(),
-                        });
-                      }
-                    },
-                    child: Icon(
-                      Icons.send,
-                      size: 38,
-                      color: Colors.lightBlue,
-                    ),
-                  ),
+        child: Container(
+          decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topRight,
+                end: Alignment.bottomLeft,
+                colors: [
+                  Colors.cyan,
+                  Colors.indigo,
                 ],
+              )
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              MessagesStream(),
+              Container(
+                decoration: kMessageContainerDecoration,
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    Expanded(
+                      child: TextField(
+                          controller: messageTextController,
+                          onChanged: (value) {
+                            messageText = value;
+                          },
+                          decoration: kMessageTextFieldDecoration),
+                    ),
+                    TextButton(
+                      onPressed: () {
+                        messageTextController.clear();
+
+                        if (loggedInUser.email == "doctor@gmail.com") {
+                          _firestore.collection('messages').add({
+                            'text': messageText + "  ⚕️",
+                            'sender': loggedInUser.email,
+                            'time': FieldValue.serverTimestamp(),
+                          });
+                        } else {
+                          _firestore.collection('messages').add({
+                            'text': messageText,
+                            'sender': loggedInUser.email,
+                            'time': FieldValue.serverTimestamp(),
+                          });
+                        }
+                      },
+                      child: Icon(
+                        Icons.send,
+                        size: 38,
+                        color: Colors.lightBlue,
+                      ),
+                    ),
+                  ],
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
@@ -179,7 +191,7 @@ class MessageBubble extends StatelessWidget {
             sender,
             style: TextStyle(
               fontSize: 12.0,
-              color: Colors.blueGrey,
+              color: Colors.white70,
             ),
           ),
           Material(
