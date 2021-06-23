@@ -1,5 +1,5 @@
 # Medtrackz
-            As the world responds to the  COVID-19 pandemic,
+  As the world responds to the  COVID-19 pandemic,
 we face the challenge of an overabundance of information 
 Related to the virus. Some of this information may be false 
 and potentially harmful.
