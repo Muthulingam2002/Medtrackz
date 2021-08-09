@@ -39,4 +39,6 @@ Care authorities.
 
 ![screenworkout](https://user-images.githubusercontent.com/71803443/121417850-f863f380-c987-11eb-9b16-a40b7fd90405.PNG)
 
+About page
+
 ![about](https://user-images.githubusercontent.com/71803443/121417854-fa2db700-c987-11eb-94b2-bdb9c7a8a08a.PNG)
