@@ -1,25 +1,30 @@
 # Medtrackz
-  As the world responds to the  COVID-19 pandemic,
-we face the challenge of an overabundance of information 
-Related to the virus. Some of this information may be false 
-and potentially harmful.
-            Inaccurate information spreads widely and at speed, 
-making it more difficult for the public to identify verified facts
-            So we have created a platform to provide verified facts
- and advices from trusted sources.
-           And the users can also clarify their doubts with the health
 
-Care authorities.
+###Why Medtracks
+
+                  As the world responds to the COVID-19 pandemic, we face the challenge of an overabundance of information Related to the virus. Some of this information may be false and potentially harmful. Inaccurate information spreads widely and at speed, making it more difficult for the public to identify verified facts.
+
+                  So I created a platform to provide verified facts and advices from trusted sources. And the users can also clarify their doubts with the health care Authorities directly. I have used flutter for the UI firebase for the authentication.
 
  
  
- we have used flutter for the UI
- firebase for the authentication
+ 
+ ###Techn Stack
+##FLUTTER
+![flutter](https://user-images.githubusercontent.com/71803443/133919087-ec50b561-7fad-4b38-8730-ddbd2132f5d0.png)
 
- cloud firestore for saving the data
+##FIREBASE
+![firebase](https://user-images.githubusercontent.com/71803443/133919102-9cda2c57-e7f5-41b3-b8f3-bea0f1635b12.png)
+
+
+##FIRESTORE
+![cloud firestore](https://user-images.githubusercontent.com/71803443/133919119-80ffdcb3-414e-4177-9fab-468e47d77b4b.png)
+
+
  
- 
+#MEDTRACKS 
  ![Medtracks](https://user-images.githubusercontent.com/71803443/126063058-c40c5c25-50e7-467f-99ce-51f01c9f438c.png)
+
 
 
 
