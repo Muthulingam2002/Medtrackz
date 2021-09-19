@@ -56,7 +56,7 @@
 ## Chat Forum
 ![screenchat](https://user-images.githubusercontent.com/71803443/121417843-f6019980-c987-11eb-8c64-62fd51bce6f6.PNG)
 
-## Workout
+## Workout Section
 
 ![screenworkout](https://user-images.githubusercontent.com/71803443/121417850-f863f380-c987-11eb-9b16-a40b7fd90405.PNG)
 
