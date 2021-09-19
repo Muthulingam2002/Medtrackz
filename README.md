@@ -38,19 +38,28 @@
 
 
 
-
+## Welcome Screen
 ![screen1](https://user-images.githubusercontent.com/71803443/121417041-19781480-c987-11eb-9683-94066ab1f6c2.PNG)
+
+## Login Screen
 
 ![screen2](https://user-images.githubusercontent.com/71803443/121417739-d8cccb00-c987-11eb-97d6-be476393cadf.PNG)
 
+## Homepage
+
 ![screen3](https://user-images.githubusercontent.com/71803443/121417780-e41ff680-c987-11eb-8e28-f422fa0d1c39.PNG)
+
+## Info Page
 
 ![screen4](https://user-images.githubusercontent.com/71803443/121417791-e71ae700-c987-11eb-8289-007597b74cd4.PNG)
 
+## Chat Forum
 ![screenchat](https://user-images.githubusercontent.com/71803443/121417843-f6019980-c987-11eb-8c64-62fd51bce6f6.PNG)
+
+## Workout
 
 ![screenworkout](https://user-images.githubusercontent.com/71803443/121417850-f863f380-c987-11eb-9b16-a40b7fd90405.PNG)
 
-About page
+## About page
 
 ![about](https://user-images.githubusercontent.com/71803443/121417854-fa2db700-c987-11eb-94b2-bdb9c7a8a08a.PNG)
