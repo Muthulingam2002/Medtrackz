@@ -7,7 +7,7 @@
   identify verified facts.
 
    So I have created a platform to provide verified facts and advices from trusted sources. And the users can also clarify their doubts with the 
-  health care Authorities directly. I have used flutter for the UI firebase for the authentication.
+  health care Authorities directly.
 
                 
  
